@@ -20,6 +20,22 @@ namespace OOPKeyWork.Console
 
             UserParam(1, 2, 3, 4);
 
+            bool status;
+            var result = CalculateMode(12, 34, out status);
+        } 
+
+        public static int CalculateMode(int a, int b, out bool isSuccessfully)
+        {
+            if (a != 0)
+            {
+                isSuccessfully = true;
+                return a % b;
+            }
+            else
+            {
+                isSuccessfully = false;
+                return 0;
+            }
         }
 
         public static int Sum(params int[] items)
@@ -39,6 +55,6 @@ namespace OOPKeyWork.Console
                 System.Console.WriteLine(lits[i]);
             }
         }
-    }
+    
     }
 }
